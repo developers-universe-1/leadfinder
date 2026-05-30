@@ -11,6 +11,36 @@ An MCP-native demand generation server. Expose LinkedIn signal detection, ICP sc
 
 **Demo mode works without API keys.** Clone, `npm install`, `npm run dev`, and explore the full dashboard instantly.
 
+## One-Line Install
+
+**Claude Desktop** — paste into `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "demand": {
+      "command": "npx",
+      "args": ["-y", "ts-node", "src/mcp/server.ts"]
+    }
+  }
+}
+```
+
+**Claude Code**:
+```bash
+claude mcp add demand -- npx -y ts-node src/mcp/server.ts
+```
+
+**Cursor** — add to `.cursor/mcp.json`:
+```json
+{
+  "mcpServers": [{
+    "name": "demand",
+    "command": "npx",
+    "args": ["-y", "ts-node", "src/mcp/server.ts"]
+  }]
+}
+```
+
 ## Why MCP for Demand Gen?
 
 Demand generation is a chain of fragmented tools: LinkedIn for signals, Apollo for enrichment, Salesforce for routing, Outreach for sequencing. Every SDR ends up copy-pasting between tabs. The Model Context Protocol (MCP) provides a standard way to expose these as **tools** that any AI agent can discover and invoke. This project is a reference implementation — a demand-specific MCP server with a visual trace panel so you can see every tool call the agent makes.

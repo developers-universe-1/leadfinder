@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "mcp-demand-engine",
+  "version": "1.0.0",
+  "description": "MCP-native demand generation server. Expose LinkedIn signal detection, ICP scoring, contact enrichment, and CRM routing as typed MCP tools.",
+  "homepage": "https://github.com/developers-universe-1/agentic-demand-engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developers-universe-1/agentic-demand-engine.git"
+  },
+  "license": "MIT",
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "ts-node", "src/mcp/server.ts"]
+  },
+  "tools": [
+    {
+      "name": "detect_signals",
+      "description": "Monitor LinkedIn engagement signals: likes, comments, reposts, profile views, mentions."
+    },
+    {
+      "name": "score_icp",
+      "description": "Score every engager 0-100 against your ICP with configurable title/industry/company-size filters."
+    },
+    {
+      "name": "enrich_contact",
+      "description": "Get verified email and direct dial via Apollo and Clearbit."
+    },
+    {
+      "name": "route_to_crm",
+      "description": "Ship qualified leads straight to Salesforce or HubSpot with campaign tags."
+    },
+    {
+      "name": "get_watchlist",
+      "description": "Get monitored profiles with follower counts and qualified-lead attribution."
+    }
+  ]
+}

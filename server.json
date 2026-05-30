@@ -1,12 +1,13 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "developers-universe-1/mcp-demand-engine",
   "version": "1.0.0",
   "description": "MCP-native demand generation: LinkedIn signals, ICP scoring, and CRM routing.",
   "homepage": "https://github.com/developers-universe-1/agentic-demand-engine",
   "repository": {
     "type": "git",
-    "url": "https://github.com/developers-universe-1/agentic-demand-engine.git"
+    "url": "https://github.com/developers-universe-1/agentic-demand-engine",
+    "source": "github"
   },
   "license": "MIT",
   "transport": {
